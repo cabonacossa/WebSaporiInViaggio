@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sapori in Viaggio | Pastas Artesanales</title>
+    <link rel="stylesheet" href="./css/styles.css"> 
+    
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="main-header__titulo">Sapori in Viaggio</h1>
+        <h2 class="main-header__subtitulo">El sabor de Italia pa tu casa.</h2>
+        <img src="./imagenes/logo.png" alt="Logo de Sapori in Viaggio" width="100"> 
+    </header>
+
+    <nav class="main-nav">
+        <!-- Lista desordenada para navergar, me falta hacer los enlaces-->
+        <ul class="main-nav__list">
+            <li><a href="index.html" class="main-nav__link">Inicio</a></li>
+            <li><a href="./pages/productos.html" class="main-nav__link">Productos</a></li>
+            <li><a href="./pages/historia.html" class="main-nav__link">Nuestra Historia</a></li>
+            <li><a href="./pages/contacto.html" class="main-nav__link">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="productos-destacados">
+            <h3>Nuestros destacados</h3>
+            <div class="productos__contenedor">
+                <article class="producto-card producto-card--oferta">
+                    <img src="./imagenes/tagliatelle.jpg" alt="Tagliatelle de espinaca" width="100%">
+                    <h4 class="producto-card__titulo">Tagliatelle al Huevo</h4>
+                    <p class="producto-card__descripcion">Nuestra pasta más vendida. Hecha a mano con <em>huevos frescos</em>.</p>
+                    <p class="producto-card__precio"><s>$5000</s> <strong>$4500</strong></p>
+                    <button class="producto-card__boton"><i class="fas fa-shopping-cart"></i> Comprar</button>
+                </article>
+
+                <article class="producto-card">
+                    <img src="./imagenes/ravioli.jpg" alt="Ravioles de calabaza">
+                    <h4 class="producto-card__titulo">Ravioles de Calabaza</h4>
+                    <p class="producto-card__descripcion">Un sabor intenso y único.</p>
+                    <p class="producto-card__precio"><strong>$6200</strong></p>
+                    <button class="producto-card__boton"><i class="fas fa-shopping-cart"></i> Comprar</button>
+                </article>
+                
+                <article class="producto-card">
+                    <img src="./imagenes/gnocchi.jpg" alt="Gnocchi de papa">
+                    <h4 class="producto-card__titulo">Gnocchi de Papa</h4>
+                    <p class="producto-card__descripcion">Suaves y listos en minutos.</p>
+                    <p class="producto-card__precio"><strong>$4800</strong></p>
+                    <button class="producto-card__boton"><i class="fas fa-shopping-cart"></i> Comprar</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- Y sí, el video lo hice con ayuda de IA. Sorry not sorry, ya se que tá muy malito, veré si lo mejoro-->
+        <section class="video-container">
+            <h3>Conoce nuestro proceso</h3>
+            <video controls poster="./imagenes/portada-video.png" width="100%">
+                <source src="./videos/proceso.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción del video.
+            </video>
+        </section>
+
+        <section class="Salsas">
+            <h4>Otros Productos</h4>
+            <table class="data-table" border="1">
+                <caption>Las salsas de esta semana</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Sabor</th>
+                        <th scope="col" colspan="2">Precio</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td rowspan="2">Salsa</td>
+                        <td>Bolognesa</td>
+                        <td>$2000 / 2 porciones </td>
+                        <td>$1000 / 1 porcion</td>
+                    </tr>
+                    <tr>
+                        <td>Crema de Puerro y verdeo</td> 
+                        <td>$3000 / 2 porciones</td>
+                        <td>$1500 / 1 porcion</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="reseñas">
+            <h2>Opiniones de nuestros clientes</h2>
+            <article class="card">
+                <h5>Maria</h5>
+                <p>La mejor pasta que probé. ¡Parece hecha por mi nonna!</p>
+            </article>
+            <article class="card">
+                <h5>Agustina</h5>
+                <p>Llegó al toque y riquísimo. ¡Ya estoy pidiendo otra tanda!</p>
+            </article>
+            <article class="card">
+                <h5>German</h5>
+                <p>El sabor es <strong>inigualable</strong>. Altamente recomendable. <span class="card__rating">5 estrellas</span></p>
+            </article>
+        </section>
+
+        <section class="contacto-form">
+            <h2>¿Quieres hacer un pedido especial? Contáctanos</h2>
+            <form action="https://formspree.io/f/meorwweb" method="POST" class="form-pedido">
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre_cliente" placeholder="Tu nombre" required>
+                
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email_cliente" placeholder="ejemplo@correo.com" required>
+
+                <label for="mensaje">Mensaje o Pedido:</label>
+                <textarea id="mensaje" name="mensaje_pedido" rows="4" placeholder="Especifica tu pedido aquí" required></textarea>
+
+                <!-- Le quiero agregar un campo oculto para redirigirlos a agradecimiento
+                <input type="hidden" name="_redirect" value="......"> -->
+                
+                <button type="submit" class="form-pedido__submit">Enviar Pedido <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>Sapori in Viaggio &copy; 2025. Bonacossa Carolina <span class="footer__contacto">Contacto: info@sapori.com</span></p>
+    </footer>
+
+</body>
+</html>
